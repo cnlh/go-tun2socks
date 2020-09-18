@@ -40,7 +40,7 @@ func RegisterOutputFn(fn func([]byte,int) (int, error)) {
 }
 
 func init() {
-	OutputFn = func(data []byte,int) (int, error) {
+	OutputFn = func(data []byte,tp int) (int, error) {
 		return 0, errors.New("output function not set")
 	}
 }
