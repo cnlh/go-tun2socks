@@ -4,6 +4,9 @@ package core
 #cgo CFLAGS: -I./c/include
 #include "lwip/tcp.h"
 
+#define AF_INET         2
+#define AF_INET6        30
+
 extern err_t output(struct pbuf *p,int t);
 
 err_t
