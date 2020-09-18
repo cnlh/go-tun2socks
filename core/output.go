@@ -9,13 +9,13 @@ extern err_t output(struct pbuf *p,int t);
 err_t
 output_ip4(struct netif *netif, struct pbuf *p, const ip4_addr_t *ipaddr)
 {
-	return output(p,4);
+	return output(p,AF_INET);
 }
 
 err_t
 output_ip6(struct netif *netif, struct pbuf *p, const ip6_addr_t *ipaddr)
 {
-	return output(p,6);
+	return output(p,AF_INET6);
 }
 
 void
